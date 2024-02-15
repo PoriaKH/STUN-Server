@@ -1,9 +1,6 @@
 import logging
-import random
-import re
 import socket
 import threading
-import time
 
 ServerIP = "127.0.0.1"   # Server IP
 ServerPort = 5355        # Server Port
@@ -63,7 +60,6 @@ class STUNServer():
             logging.info('Received data from client %s: %s', client, msg)
             t = threading.Thread(target=self.talk_to_client, args=(msg,client))
             t.start()
-            # self.talk_to_client(msg,client)
     def src_id_exists(self,message, address):    # source ID exists -> 1 else -> -1
         for i in range(len(list)):
             x = list[i]
@@ -108,9 +104,6 @@ class STUNServer():
         print(message.hex())
         print("")
         print("message = ", message)
-
-        # final_answer = message
-        # self.sock.sendto(final_answer, address)
 
         if message.startswith(b'HELLOSERVER '):
             print("were in HELLOSERVER")

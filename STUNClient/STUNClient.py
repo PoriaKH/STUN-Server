@@ -1,6 +1,5 @@
 import socket
 import threading
-import time
 
 STUNServerIP = "127.0.0.1"
 STUNServerPORT = 5355
@@ -38,11 +37,8 @@ class STUNClient():
     def listen(self):
         flag = 0
         while True:
-            # print("we are in while")
             msg = self.sock.recv(bufferSize)
             print(msg)
             if msg.startswith(b'Message from Server:\nYOUR_IP') and flag == 0:
                 flag = 1
                 self.connect_to_client(msg)
-
-    # sock.bind((STUNServerIP, STUNServerPORT))
