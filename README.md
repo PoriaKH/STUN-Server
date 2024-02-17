@@ -26,5 +26,5 @@ Server ip and port are defined by variables `ServerIP` and `ServerPort` in `./ST
 We have provided a sample of client written in python in `./STUNClient` for your comfort.
 
 ### Build
-Use `make` to build the project. The executable file will be in the `dist` directory. <br/>
+Use `make` to build the project. The executable file will be in the `./dist` directory. <br/>
 `make clean` to clean the artifacts. <br/>
