@@ -2,7 +2,6 @@
 Its an STUN server using [User Datagram Protocol (UDP)](https://en.wikipedia.org/wiki/User_Datagram_Protocol) to communicate with clients which is used to solve the [UDP hole punching](https://en.wikipedia.org/wiki/UDP_hole_punching) problem and establish a connection between two devices behind [network address translation (NAT)](https://en.wikipedia.org/wiki/Network_address_translation).<br/>
 
 ### Usage
-Each client must send a UDP request to the server and the server will give each client a unique ID.<br/>
 There are 2 kind of instructions acceptable for the server <br/>
 first is the ID introduction  (first of all,you need to tell server your ID )
 ```
